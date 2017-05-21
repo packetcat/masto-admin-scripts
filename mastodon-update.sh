@@ -9,7 +9,8 @@ RAILS_ENV=production
 cd $MASTODON_INSTALL_DIR
 git pull
 git checkout $(git tag | tail -n 1)
-bundle exec rails db:migrate
+bundle install
 yarn install --pure-lockfile
+bundle exec rails db:migrate
 bundle exec rails assets:precompile
 echo "Mastodon update complete, restart Mastodon to put the update in effect."
