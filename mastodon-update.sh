@@ -11,6 +11,6 @@ git pull
 git checkout $(git tag | tail -n 1)
 bundle install
 yarn install --pure-lockfile
-bundle exec rails db:migrate
-bundle exec rails assets:precompile
+RAILS_ENV=production bundle exec rails db:migrate
+RAILS_ENV=production bundle exec rails assets:precompile
 echo "Mastodon update complete, restart Mastodon to put the update in effect."
