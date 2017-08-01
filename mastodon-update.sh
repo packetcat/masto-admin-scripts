@@ -8,7 +8,7 @@ RAILS_ENV=production
 
 cd $MASTODON_INSTALL_DIR
 git pull
-git checkout v1.4.7
+git checkout v1.5.0
 bundle install
 yarn install --pure-lockfile
 RAILS_ENV=production bundle exec rails db:migrate
